@@ -18,7 +18,7 @@
     <DataTemplate DataType="m:StateDefinition" x:Key="StateDefinitionTabTemplate">
       <StackPanel Orientation="Horizontal" Height="50" Margin="-5">
         <Border Background="DimGray" Width="50">
-          <TextBlock Text="IMAGE" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+          <TextBlock Text="IMAGE" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </Border>
         <StackPanel VerticalAlignment="Center" Margin="5,0">
           <TextBlock Text="{Binding DisplayName}" FontSize="20" />
@@ -31,32 +31,32 @@
         <StackPanel Margin="10">
           <DockPanel Height="160">
             <Border Background="DimGray" Width="160">
-              <TextBlock Text="IMAGE" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+              <TextBlock Text="IMAGE" VerticalAlignment="Center" HorizontalAlignment="Center" />
             </Border>
             <Grid Margin="5,0,0,0" ColumnDefinitions="128,*" RowDefinitions="Auto, Auto">
-              <TextBox Text="{Binding Id}" Watermark="Id" Classes="Transparent"/>
-              <TextBox Text="{Binding Name}" Watermark="Name" Classes="Transparent" Grid.Column="1"/>
-              <TextBox Text="{Binding Description}" Watermark="Description" Classes="Editor" Grid.Row="1" Grid.ColumnSpan="2"/>
+              <TextBox Text="{Binding Id}" Watermark="Id" Classes="Transparent" />
+              <TextBox Text="{Binding Name}" Watermark="Name" Classes="Transparent" Grid.Column="1" />
+              <TextBox Text="{Binding Description}" Watermark="Description" Classes="Editor" Grid.Row="1" Grid.ColumnSpan="2" />
             </Grid>
           </DockPanel>
-          <TextBlock Text="Configurations" Classes="Title"/>
+          <TextBlock Text="Configurations" Classes="Title" />
           <Grid ColumnDefinitions="*,*,*">
-            <controls:AdvancedTextBox TextBinding="{Binding Type}"/>
-            <controls:AdvancedTextBox TextBinding="{Binding MoveType}" Grid.Column="1"/>
-            <controls:AdvancedTextBox TextBinding="{Binding Physics}" Grid.Column="2"/>
+            <controls:AdvancedTextBox TextBinding="{Binding Type}" />
+            <controls:AdvancedTextBox TextBinding="{Binding MoveType}" Grid.Column="1" />
+            <controls:AdvancedTextBox TextBinding="{Binding Physics}" Grid.Column="2" />
           </Grid>
           <Grid ColumnDefinitions="*,*,*">
-            <controls:AdvancedTextBox TextBinding="{Binding Juggle}"/>
-            <controls:AdvancedTextBox TextBinding="{Binding VelSet}" Grid.Column="1"/>
-            <controls:AdvancedTextBox TextBinding="{Binding PowerAdd}" Grid.Column="2"/>
+            <controls:AdvancedTextBox TextBinding="{Binding Juggle}" />
+            <controls:AdvancedTextBox TextBinding="{Binding VelSet}" Grid.Column="1" />
+            <controls:AdvancedTextBox TextBinding="{Binding PowerAdd}" Grid.Column="2" />
           </Grid>
           <Grid ColumnDefinitions="*,*,*" Margin="0,10,0,0">
-            <controls:AdvancedTextBox TextBinding="{Binding Ctrl}"/>
-            <controls:AdvancedTextBox TextBinding="{Binding Anim}" Grid.Column="1"/>
-            <controls:AdvancedTextBox TextBinding="{Binding SprPriority}" Grid.Column="2"/>
+            <controls:AdvancedTextBox TextBinding="{Binding Ctrl}" />
+            <controls:AdvancedTextBox TextBinding="{Binding Anim}" Grid.Column="1" />
+            <controls:AdvancedTextBox TextBinding="{Binding SprPriority}" Grid.Column="2" />
           </Grid>
-          <TextBlock Text="States" Classes="Title"/>
-          <ItemsControl ItemsSource="{Binding States}" ItemTemplate="{StaticResource StateTemplate}"/>
+          <TextBlock Text="States" Classes="Title" />
+          <ItemsControl ItemsSource="{Binding States}" ItemTemplate="{StaticResource StateTemplate}" />
           <Button
             Classes="AddButton"
             Command="{Binding AddStateCommand}">
@@ -71,11 +71,11 @@
           <Expander.Header>
             <DockPanel Margin="-15,0,0,0">
               <Border Background="DimGray" Margin="5" Height="60" Width="60" CornerRadius="5" IsVisible="{Binding IsEntryState}">
-                <TextBlock Text="IMAGE" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock Text="IMAGE" VerticalAlignment="Center" HorizontalAlignment="Center" />
               </Border>
               <Grid ColumnDefinitions="*,192,*">
-                <controls:AdvancedTextBox TextBinding="{Binding Name}"/>
-                <controls:AdvancedTextBox TextBinding="{Binding Type}" Grid.Column="1"/>
+                <controls:AdvancedTextBox TextBinding="{Binding Name}" />
+                <controls:AdvancedTextBox TextBinding="{Binding Type}" Grid.Column="1" />
               </Grid>
             </DockPanel>
           </Expander.Header>
@@ -84,8 +84,8 @@
               <ItemsControl.ItemTemplate>
                 <DataTemplate x:DataType="m:StringStringKeyValue">
                   <Grid ColumnDefinitions="128,*" HorizontalAlignment="Stretch">
-                    <controls:AdvancedTextBox TextBinding="{Binding Key}" Watermark="" HasInlineToolTip="True" HasToolTip="False"/>
-                    <controls:AdvancedTextBox TextBinding="{Binding Value}" Watermark="" HasInlineToolTip="True" HasToolTip="False" Grid.Column="1"/>
+                    <controls:AdvancedTextBox TextBinding="{Binding Key}" Watermark="" HasInlineToolTip="True" HasToolTip="False" />
+                    <controls:AdvancedTextBox TextBinding="{Binding Value}" Watermark="" HasInlineToolTip="True" HasToolTip="False" Grid.Column="1" />
                   </Grid>
                 </DataTemplate>
               </ItemsControl.ItemTemplate>
@@ -96,7 +96,7 @@
               + Add Entry
             </Button>
           </StackPanel>
-          </Expander>
+        </Expander>
       </Border>
     </DataTemplate>
     <DataTemplate x:DataType="m:CommandDefinition" x:Key="CommandTemplate">
@@ -107,8 +107,8 @@
             <ItemsControl.ItemTemplate>
               <DataTemplate x:DataType="m:CommandInput">
                 <DockPanel LastChildFill="True">
-                  <controls:AdvancedTextBox TextBinding="{Binding Time}" Width="128"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Command}"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding Time}" Width="128" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Command}" />
                 </DockPanel>
               </DataTemplate>
             </ItemsControl.ItemTemplate>
@@ -126,14 +126,14 @@
   <Grid VerticalAlignment="Stretch" RowDefinitions="Auto,*" Background="{StaticResource TabHeaderColor}">
     <Grid Margin="10">
       <Grid Height="128" ColumnDefinitions="*,150" RowDefinitions="*,*">
-        <TextBox Text="{Binding FighterManager.Fighter.DisplayName}" Classes="Transparent" FontSize="32"/>
-        <TextBox Text="{Binding FighterManager.Fighter.ExportPath}" Watermark="Export Folder Path (leave blank for same folder)" Grid.Row="1"/>
+        <TextBox Text="{Binding FighterManager.Fighter.DisplayName}" Classes="Transparent" FontSize="32" />
+        <TextBox Text="{Binding FighterManager.Fighter.ExportPath}" Watermark="Export Folder Path (leave blank for same folder)" Grid.Row="1" />
         <Button Width="150" DockPanel.Dock="Right" Command="{Binding OpenFolderCommand}" Grid.Column="1">Containing Folder</Button>
         <Button Width="150" DockPanel.Dock="Right" Command="{Binding EditCommand}" Grid.Column="1" Grid.Row="1">Change Fighter</Button>
       </Grid>
       <Grid Background="{StaticResource TabHeaderColor}" IsVisible="{Binding IsEditingDefinitionPath}" Height="128" ColumnDefinitions="*,150" RowDefinitions="*,*">
-        <TextBlock Margin="10,0" FontSize="32" Opacity="0.5" Text="Select a Fighter..." VerticalAlignment="Center"/>
-        <TextBox Text="{Binding DefinitionPath}" Watermark="Fighter Definition Path"  Grid.Row="1"/>
+        <TextBlock Margin="10,0" FontSize="32" Opacity="0.5" Text="Select a Fighter..." VerticalAlignment="Center" />
+        <TextBox Text="{Binding DefinitionPath}" Watermark="Fighter Definition Path"  Grid.Row="1" />
         <Button Width="150" Command="{Binding SetDefinitionPathCommand}" Grid.Column="1">Set Definition</Button>
         <Button Width="150" Command="{Binding CancelCommand}" Grid.Column="1" Grid.Row="1">Cancel</Button>
       </Grid>
@@ -142,78 +142,78 @@
       <TabItem Header="Definition">
         <ScrollViewer Background="{StaticResource TabContentColor}" Grid.ColumnSpan="2" Grid.RowSpan="4">
           <StackPanel Margin="10">
-            <TextBlock Text="Info" Classes="Title"/>
+            <TextBlock Text="Info" Classes="Title" />
             <Grid ColumnDefinitions="*, *, *, *">
               <controls:AdvancedTextBox TextBinding="{Binding Name}" />
-              <controls:AdvancedTextBox TextBinding="{Binding DisplayName}" Grid.Column="1"/>
-              <controls:AdvancedTextBox TextBinding="{Binding Author}" Grid.Column="2" Grid.ColumnSpan="2"/>
+              <controls:AdvancedTextBox TextBinding="{Binding DisplayName}" Grid.Column="1" />
+              <controls:AdvancedTextBox TextBinding="{Binding Author}" Grid.Column="2" Grid.ColumnSpan="2" />
             </Grid>
             <Grid ColumnDefinitions="*, *, *, *">
               <controls:AdvancedTextBox TextBinding="{Binding VersionDate}" />
-              <controls:AdvancedTextBox TextBinding="{Binding MugenVersion}" Grid.Column="1"/>
-              <controls:AdvancedTextBox TextBinding="{Binding LocalCoord}" Grid.Column="2"/>
-              <controls:AdvancedTextBox TextBinding="{Binding Pal_Defaults}" Grid.Column="3"/>
+              <controls:AdvancedTextBox TextBinding="{Binding MugenVersion}" Grid.Column="1" />
+              <controls:AdvancedTextBox TextBinding="{Binding LocalCoord}" Grid.Column="2" />
+              <controls:AdvancedTextBox TextBinding="{Binding Pal_Defaults}" Grid.Column="3" />
             </Grid>
-            <TextBlock Text="Arcade" Classes="Title"/>
+            <TextBlock Text="Arcade" Classes="Title" />
             <Grid ColumnDefinitions="*, *">
-              <controls:AdvancedTextBox TextBinding="{Binding Intro_Storyboard}"/>
-              <controls:AdvancedTextBox TextBinding="{Binding Ending_Storyboard}" Grid.Column="1"/>
+              <controls:AdvancedTextBox TextBinding="{Binding Intro_Storyboard}" />
+              <controls:AdvancedTextBox TextBinding="{Binding Ending_Storyboard}" Grid.Column="1" />
             </Grid>
-            <TextBlock Text="Palette Keymaps" Classes="Title"/>
+            <TextBlock Text="Palette Keymaps" Classes="Title" />
             <Grid ColumnDefinitions="*, *, *, *, *, *">
-              <controls:AdvancedTextBox TextBinding="{Binding X}"/>
-              <controls:AdvancedTextBox TextBinding="{Binding Y}" Grid.Column="1"/>
-              <controls:AdvancedTextBox TextBinding="{Binding Z}" Grid.Column="2"/>
-              <controls:AdvancedTextBox TextBinding="{Binding A}" Grid.Column="3"/>
-              <controls:AdvancedTextBox TextBinding="{Binding B}" Grid.Column="4"/>
-              <controls:AdvancedTextBox TextBinding="{Binding C}" Grid.Column="5"/>
+              <controls:AdvancedTextBox TextBinding="{Binding X}" />
+              <controls:AdvancedTextBox TextBinding="{Binding Y}" Grid.Column="1" />
+              <controls:AdvancedTextBox TextBinding="{Binding Z}" Grid.Column="2" />
+              <controls:AdvancedTextBox TextBinding="{Binding A}" Grid.Column="3" />
+              <controls:AdvancedTextBox TextBinding="{Binding B}" Grid.Column="4" />
+              <controls:AdvancedTextBox TextBinding="{Binding C}" Grid.Column="5" />
             </Grid>
             <Grid ColumnDefinitions="*, *, *, *, *, *">
-              <controls:AdvancedTextBox TextBinding="{Binding X2}"/>
-              <controls:AdvancedTextBox TextBinding="{Binding Y2}" Grid.Column="1"/>
-              <controls:AdvancedTextBox TextBinding="{Binding Z2}" Grid.Column="2"/>
-              <controls:AdvancedTextBox TextBinding="{Binding A2}" Grid.Column="3"/>
-              <controls:AdvancedTextBox TextBinding="{Binding B2}" Grid.Column="4"/>
-              <controls:AdvancedTextBox TextBinding="{Binding C2}" Grid.Column="5"/>
+              <controls:AdvancedTextBox TextBinding="{Binding X2}" />
+              <controls:AdvancedTextBox TextBinding="{Binding Y2}" Grid.Column="1" />
+              <controls:AdvancedTextBox TextBinding="{Binding Z2}" Grid.Column="2" />
+              <controls:AdvancedTextBox TextBinding="{Binding A2}" Grid.Column="3" />
+              <controls:AdvancedTextBox TextBinding="{Binding B2}" Grid.Column="4" />
+              <controls:AdvancedTextBox TextBinding="{Binding C2}" Grid.Column="5" />
             </Grid>
-            <TextBlock Text="Files" Classes="Title"/>
-            <Button Content="Regenerate Properties" Height="30" HorizontalAlignment="Center"/>
+            <TextBlock Text="Files" Classes="Title" />
+            <Button Content="Regenerate Properties" Height="30" HorizontalAlignment="Center" />
             <DockPanel LastChildFill="True">
               <StackPanel Grid.Column="1" HorizontalAlignment="Stretch" DockPanel.Dock="Right" DataContext="{Binding #window.((vm:HomeViewModel)DataContext).FighterManager}">
-                <Button Width="100" Content="Export" Command="{Binding ExportFileCommand}" CommandParameter="def"/>
-                <Button Width="100" Content="Export" Command="{Binding ExportFileCommand}" CommandParameter="cmd"/>
-                <Button Width="100" Content="Export" Command="{Binding ExportFileCommand}" CommandParameter="cns"/>
-                <Button Width="100" Content="Export" IsEnabled="False"/>
-                <Button Width="100" Content="Export" IsEnabled="False"/>
-                <Button Width="100" Content="Export" IsEnabled="False"/>
-                <Button Width="100" Content="Export" IsEnabled="False"/>
-                <Button Width="100" Content="Export" IsEnabled="False"/>
-                <Button Width="100" Content="Export" IsEnabled="False"/>
+                <Button Width="100" Content="Export" Command="{Binding ExportFileCommand}" CommandParameter="def" />
+                <Button Width="100" Content="Export" Command="{Binding ExportFileCommand}" CommandParameter="cmd" />
+                <Button Width="100" Content="Export" Command="{Binding ExportFileCommand}" CommandParameter="cns" />
+                <Button Width="100" Content="Export" IsEnabled="False" />
+                <Button Width="100" Content="Export" IsEnabled="False" />
+                <Button Width="100" Content="Export" IsEnabled="False" />
+                <Button Width="100" Content="Export" IsEnabled="False" />
+                <Button Width="100" Content="Export" IsEnabled="False" />
+                <Button Width="100" Content="Export" IsEnabled="False" />
               </StackPanel>
               <StackPanel>
-                <controls:AdvancedTextBox TextBinding="{Binding DefinitionPath}" IsEnabled="False"/>
-                <controls:AdvancedTextBox TextBinding="{Binding Cmd}"/>
-                <controls:AdvancedTextBox TextBinding="{Binding Cns}"/>
-                <controls:AdvancedTextBox TextBinding="{Binding Sprite}"/>
-                <controls:AdvancedTextBox TextBinding="{Binding Anim}"/>
-                <controls:AdvancedTextBox TextBinding="{Binding Sound}"/>
-                <controls:AdvancedTextBox TextBinding="{Binding Ai}"/>
-                <controls:AdvancedTextBox TextBinding="{Binding MoveList}"/>
-                <controls:AdvancedTextBox TextBinding="{Binding StCommon}"/>
+                <controls:AdvancedTextBox TextBinding="{Binding DefinitionPath}" IsEnabled="False" />
+                <controls:AdvancedTextBox TextBinding="{Binding Cmd}" />
+                <controls:AdvancedTextBox TextBinding="{Binding Cns}" />
+                <controls:AdvancedTextBox TextBinding="{Binding Sprite}" />
+                <controls:AdvancedTextBox TextBinding="{Binding Anim}" />
+                <controls:AdvancedTextBox TextBinding="{Binding Sound}" />
+                <controls:AdvancedTextBox TextBinding="{Binding Ai}" />
+                <controls:AdvancedTextBox TextBinding="{Binding MoveList}" />
+                <controls:AdvancedTextBox TextBinding="{Binding StCommon}" />
               </StackPanel>
             </DockPanel>
             <ItemsControl ItemsSource="{Binding StFiles}">
               <ItemsControl.ItemTemplate>
                 <DataTemplate>
                   <DockPanel Margin="0,0,0,5" LastChildFill="True">
-                    <Button Width="100" Content="Export" IsEnabled="False" Grid.Column="1" DockPanel.Dock="Right"/>
-                    <TextBox Watermark="st" Text="{Binding .}"/>
+                    <Button Width="100" Content="Export" IsEnabled="False" Grid.Column="1" DockPanel.Dock="Right" />
+                    <TextBox Watermark="st" Text="{Binding .}" />
                   </DockPanel>
                 </DataTemplate>
               </ItemsControl.ItemTemplate>
             </ItemsControl>
             <DockPanel LastChildFill="True">
-              <Button Width="100"  Content="Export All" DockPanel.Dock="Right"/>
+              <Button Width="100"  Content="Export All" DockPanel.Dock="Right" />
               <Button Content="Add 'st' File" Command="{Binding #window.((vm:HomeViewModel)DataContext).FighterManager.AddStateFileCommand}" HorizontalAlignment="Stretch" />
             </DockPanel>
           </StackPanel>
@@ -227,43 +227,43 @@
                 <Grid ColumnDefinitions="*,*">
                   <StackPanel VerticalAlignment="Center">
                     <Grid ColumnDefinitions="*, *">
-                      <controls:AdvancedTextBox TextBinding="{Binding Life}"/>
-                      <controls:AdvancedTextBox TextBinding="{Binding AirJuggle}" Grid.Column="1"/>
+                      <controls:AdvancedTextBox TextBinding="{Binding Life}" />
+                      <controls:AdvancedTextBox TextBinding="{Binding AirJuggle}" Grid.Column="1" />
                     </Grid>
                     <Grid ColumnDefinitions="*, *">
-                      <controls:AdvancedTextBox TextBinding="{Binding Attack}"/>
-                      <controls:AdvancedTextBox TextBinding="{Binding Defence}"  Grid.Column="1"/>
+                      <controls:AdvancedTextBox TextBinding="{Binding Attack}" />
+                      <controls:AdvancedTextBox TextBinding="{Binding Defence}"  Grid.Column="1" />
                     </Grid>
                   </StackPanel>
-                  <Image Source="/Resources/stats.png" Height="150" Grid.Column="1"/>
+                  <Image Source="/Resources/stats.png" Height="150" Grid.Column="1" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*">
                   <StackPanel VerticalAlignment="Center">
                     <controls:AdvancedTextBox TextBinding="{Binding LieDown_Time}" />
-                    <controls:AdvancedTextBox TextBinding="{Binding Fall_Defence_Up}"/>
+                    <controls:AdvancedTextBox TextBinding="{Binding Fall_Defence_Up}" />
                   </StackPanel>
-                  <Image Source="/Resources/knockdown.png" Height="150" Grid.Column="1"/>
+                  <Image Source="/Resources/knockdown.png" Height="150" Grid.Column="1" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*">
                   <StackPanel VerticalAlignment="Center">
-                    <controls:AdvancedTextBox TextBinding="{Binding SparkNo}"/>
-                    <controls:AdvancedTextBox TextBinding="{Binding Guard_SparkNo}"/>
+                    <controls:AdvancedTextBox TextBinding="{Binding SparkNo}" />
+                    <controls:AdvancedTextBox TextBinding="{Binding Guard_SparkNo}" />
                   </StackPanel>
-                  <Image Source="/Resources/blockspark.png" Height="150" Grid.Column="1"/>
+                  <Image Source="/Resources/blockspark.png" Height="150" Grid.Column="1" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*">
                   <StackPanel VerticalAlignment="Center">
-                    <controls:AdvancedTextBox TextBinding="{Binding KO_Echo}"/>
-                    <controls:AdvancedTextBox TextBinding="{Binding Volume}"/>
+                    <controls:AdvancedTextBox TextBinding="{Binding KO_Echo}" />
+                    <controls:AdvancedTextBox TextBinding="{Binding Volume}" />
                   </StackPanel>
-                  <Image Source="/Resources/sound.png" Height="150" Grid.Column="1"/>
+                  <Image Source="/Resources/sound.png" Height="150" Grid.Column="1" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*">
                   <StackPanel VerticalAlignment="Center">
-                    <controls:AdvancedTextBox TextBinding="{Binding IntPersistIndex}"/>
-                    <controls:AdvancedTextBox TextBinding="{Binding FloatPersistIndex}"/>
+                    <controls:AdvancedTextBox TextBinding="{Binding IntPersistIndex}" />
+                    <controls:AdvancedTextBox TextBinding="{Binding FloatPersistIndex}" />
                   </StackPanel>
-                  <Image Source="/Resources/sound.png" Height="150" Grid.Column="1"/>
+                  <Image Source="/Resources/sound.png" Height="150" Grid.Column="1" />
                 </Grid>
               </StackPanel>
             </ScrollViewer>
@@ -274,39 +274,39 @@
                 <Grid ColumnDefinitions="*,*">
                   <StackPanel VerticalAlignment="Center">
                     <Grid ColumnDefinitions="*,*">
-                      <controls:AdvancedTextBox TextBinding="{Binding XScale}"/>
-                      <controls:AdvancedTextBox TextBinding="{Binding YScale}" Grid.Column="1"/>
+                      <controls:AdvancedTextBox TextBinding="{Binding XScale}" />
+                      <controls:AdvancedTextBox TextBinding="{Binding YScale}" Grid.Column="1" />
                     </Grid>
                     <Grid ColumnDefinitions="*,*">
-                      <controls:AdvancedTextBox TextBinding="{Binding Height}"/>
-                      <controls:AdvancedTextBox TextBinding="{Binding Attack_Dist}" Grid.Column="1"/>
+                      <controls:AdvancedTextBox TextBinding="{Binding Height}" />
+                      <controls:AdvancedTextBox TextBinding="{Binding Attack_Dist}" Grid.Column="1" />
                     </Grid>
                     <Grid ColumnDefinitions="*,*">
-                      <controls:AdvancedTextBox TextBinding="{Binding ShadowOffset}"/>
-                      <controls:AdvancedTextBox TextBinding="{Binding Draw_Offset}" Grid.Column="1"/>
+                      <controls:AdvancedTextBox TextBinding="{Binding ShadowOffset}" />
+                      <controls:AdvancedTextBox TextBinding="{Binding Draw_Offset}" Grid.Column="1" />
                     </Grid>
                   </StackPanel>
-                  <Image Source="/Resources/size.png" Height="150" Grid.Column="1"/>
+                  <Image Source="/Resources/size.png" Height="150" Grid.Column="1" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*">
                   <StackPanel VerticalAlignment="Center">
                     <Grid ColumnDefinitions="*,*">
-                      <controls:AdvancedTextBox TextBinding="{Binding Air_Back}"/>
-                      <controls:AdvancedTextBox TextBinding="{Binding Air_Front}" Grid.Column="1"/>
+                      <controls:AdvancedTextBox TextBinding="{Binding Air_Back}" />
+                      <controls:AdvancedTextBox TextBinding="{Binding Air_Front}" Grid.Column="1" />
                     </Grid>
                     <Grid ColumnDefinitions="*,*">
-                      <controls:AdvancedTextBox TextBinding="{Binding Ground_Back}"/>
-                      <controls:AdvancedTextBox TextBinding="{Binding Ground_Front}" Grid.Column="1"/>
+                      <controls:AdvancedTextBox TextBinding="{Binding Ground_Back}" />
+                      <controls:AdvancedTextBox TextBinding="{Binding Ground_Front}" Grid.Column="1" />
                     </Grid>
                   </StackPanel>
-                  <Image Source="/Resources/size.png" Height="150" Grid.Column="1"/>
+                  <Image Source="/Resources/size.png" Height="150" Grid.Column="1" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*">
                   <StackPanel VerticalAlignment="Center">
-                    <controls:AdvancedTextBox TextBinding="{Binding Proj_Attack_Dist}"/>
-                    <controls:AdvancedTextBox TextBinding="{Binding Proj_DoScale}"/>
+                    <controls:AdvancedTextBox TextBinding="{Binding Proj_Attack_Dist}" />
+                    <controls:AdvancedTextBox TextBinding="{Binding Proj_DoScale}" />
                   </StackPanel>
-                  <Image Source="/Resources/iceball.png" Height="150" Grid.Column="1"/>
+                  <Image Source="/Resources/iceball.png" Height="150" Grid.Column="1" />
                 </Grid>
               </StackPanel>
             </ScrollViewer>
@@ -315,70 +315,70 @@
             <ScrollViewer>
               <StackPanel Margin="10">
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding YAccel}" Grid.ColumnSpan="2"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding AirJump_Num}" Grid.Column="2"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding AirJump_Height}" Grid.Column="3"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding YAccel}" Grid.ColumnSpan="2" />
+                  <controls:AdvancedTextBox TextBinding="{Binding AirJump_Num}" Grid.Column="2" />
+                  <controls:AdvancedTextBox TextBinding="{Binding AirJump_Height}" Grid.Column="3" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*" Margin="0,10,0,0">
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Add}"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Mul}" Grid.Column="1"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Add}" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Mul}" Grid.Column="1" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Back}"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Up}" Grid.Column="1"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Down}" Grid.Column="2"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Fwd}" Grid.Column="3"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Back}" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Up}" Grid.Column="1" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Down}" Grid.Column="2" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Fwd}" Grid.Column="3" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding AirJump_Back}"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding AirJump_Neu}" Grid.Column="1" Grid.ColumnSpan="2"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding AirJump_Fwd}" Grid.Column="3"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding AirJump_Back}" />
+                  <controls:AdvancedTextBox TextBinding="{Binding AirJump_Neu}" Grid.Column="1" Grid.ColumnSpan="2" />
+                  <controls:AdvancedTextBox TextBinding="{Binding AirJump_Fwd}" Grid.Column="3" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding Jump_Back}"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Jump_Neu}" Grid.Column="1" Grid.ColumnSpan="2"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Jump_Fwd}" Grid.Column="3"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding Jump_Back}" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Jump_Neu}" Grid.Column="1" Grid.ColumnSpan="2" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Jump_Fwd}" Grid.Column="3" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding RunJump_Back}" VerticalAlignment="Bottom"/>
-                  <Image Source="/Resources/size.png" Height="150"  Grid.Column="1"  Grid.ColumnSpan="2"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding RunJump_Fwd}" VerticalAlignment="Bottom" Grid.Column="3"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding RunJump_Back}" VerticalAlignment="Bottom" />
+                  <Image Source="/Resources/size.png" Height="150"  Grid.Column="1"  Grid.ColumnSpan="2" />
+                  <controls:AdvancedTextBox TextBinding="{Binding RunJump_Fwd}" VerticalAlignment="Bottom" Grid.Column="3" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding Run_Back}"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Walk_Back}" Grid.Column="1"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Walk_Fwd}" Grid.Column="2"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Run_Fwd}"  Grid.Column="3"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding Run_Back}" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Walk_Back}" Grid.Column="1" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Walk_Fwd}" Grid.Column="2" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Run_Fwd}"  Grid.Column="3" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding Stand_Friction}"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Stand_Friction_Threshold}" Grid.Column="1"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Crouch_Friction}"  Grid.Column="2"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Crouch_Friction_Threshold}" Grid.Column="3"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding Stand_Friction}" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Stand_Friction_Threshold}" Grid.Column="1" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Crouch_Friction}"  Grid.Column="2" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Crouch_Friction_Threshold}" Grid.Column="3" />
                 </Grid>
-                <TextBlock Text="Air_GetHit and Bounce values" Classes="Title"/>
+                <TextBlock Text="Air_GetHit and Bounce values" Classes="Title" />
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_GroundLevel}" Grid.Column="1"/>
-                </Grid>
-                <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_Trip_GroundLevel}" Grid.Column="1"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_GroundLevel}" Grid.Column="1" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_GroundRecover}"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_GroundRecover_GroundLevel}" Grid.Column="1"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_GroundRecover_Ground_Threshold}" Grid.Column="3"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_Trip_GroundLevel}" Grid.Column="1" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_YAccel}"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Threshold}" Grid.Column="3"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_GroundRecover}" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_GroundRecover_GroundLevel}" Grid.Column="1" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_GroundRecover_Ground_Threshold}" Grid.Column="3" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding Down_Bounce_YAccel}"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Down_Bounce_GroundLevel}" Grid.Column="1"/>
-                  <controls:AdvancedTextBox TextBinding="{Binding Down_Bounce_Offset}" Grid.Column="2"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_YAccel}" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Air_GetHit_AirRecover_Threshold}" Grid.Column="3" />
                 </Grid>
                 <Grid ColumnDefinitions="*,*,*,*">
-                  <controls:AdvancedTextBox TextBinding="{Binding Down_Friction_Threshold}" Grid.Column="3"/>
+                  <controls:AdvancedTextBox TextBinding="{Binding Down_Bounce_YAccel}" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Down_Bounce_GroundLevel}" Grid.Column="1" />
+                  <controls:AdvancedTextBox TextBinding="{Binding Down_Bounce_Offset}" Grid.Column="2" />
+                </Grid>
+                <Grid ColumnDefinitions="*,*,*,*">
+                  <controls:AdvancedTextBox TextBinding="{Binding Down_Friction_Threshold}" Grid.Column="3" />
                 </Grid>
               </StackPanel>
             </ScrollViewer>
@@ -386,20 +386,20 @@
           <TabItem Header="Quotes">
             <ScrollViewer>
               <StackPanel>
-                <TextBlock Text="Quotes" Classes="Title"/>
+                <TextBlock Text="Quotes" Classes="Title" />
                 <ItemsControl ItemsSource="{Binding Quotes}">
                   <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                      <TextBox Text="{Binding .}"/>
+                      <TextBox Text="{Binding .}" />
                     </DataTemplate>
                   </ItemsControl.ItemTemplate>
                 </ItemsControl>
                 <Button Content="Add Quote" Command="{Binding #window.((vm:HomeViewModel)DataContext).FighterManager.AddQuoteCommand}" />
-                <TextBlock Text="Japanese Quotes" Classes="Title"/>
+                <TextBlock Text="Japanese Quotes" Classes="Title" />
                 <ItemsControl ItemsSource="{Binding Ja_Quotes}">
                   <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                      <TextBox Text="{Binding .}"/>
+                      <TextBox Text="{Binding .}" />
                     </DataTemplate>
                   </ItemsControl.ItemTemplate>
                 </ItemsControl>
@@ -409,7 +409,7 @@
           </TabItem>
         </TabControl>
       </TabItem>
-      <TabItem Header="Variables"/>
+      <TabItem Header="Variables" />
       <TabItem Header="Entry States">
         <TabControl Background="{StaticResource TabContentColor}">
           <TabItem Header="States">
@@ -423,14 +423,14 @@
             </ScrollViewer>
           </TabItem>
           <TabItem Header="{Binding CommandDefinitions.Count, StringFormat='Commands ({0})'}">
-              <ScrollViewer>
-                <StackPanel>
-                  <Button Classes="AddButton" Command="{Binding #window.((vm:HomeViewModel)DataContext).FighterManager.AddCommandDefinitionCommand}">
-                    + Add Command
-                  </Button>
-                  <ItemsControl ItemsSource="{Binding CommandDefinitions}" Background="{StaticResource TabContentColor}" ItemTemplate="{StaticResource CommandTemplate}"/>
-                </StackPanel>
-              </ScrollViewer>
+            <ScrollViewer>
+              <StackPanel>
+                <Button Classes="AddButton" Command="{Binding #window.((vm:HomeViewModel)DataContext).FighterManager.AddCommandDefinitionCommand}">
+                  + Add Command
+                </Button>
+                <ItemsControl ItemsSource="{Binding CommandDefinitions}" Background="{StaticResource TabContentColor}" ItemTemplate="{StaticResource CommandTemplate}" />
+              </StackPanel>
+            </ScrollViewer>
           </TabItem>
         </TabControl>
       </TabItem>
@@ -449,16 +449,16 @@
               </ListBox>
             </StackPanel>
           </ScrollViewer>
-          <GridSplitter Grid.Column="1"/>
+          <GridSplitter Grid.Column="1" />
           <Carousel Grid.Column="2"
                     Padding="0"
                     Background="{StaticResource TabContentColor}"
                     VerticalAlignment="Stretch"
                     ItemsSource="{Binding StateDefinitions}"
                     SelectedIndex="{Binding #StateDefinitionsListBox.SelectedIndex}"
-                    ItemTemplate="{StaticResource StateDefinitionTemplate}"/>
+                    ItemTemplate="{StaticResource StateDefinitionTemplate}" />
         </Grid>
       </TabItem>
     </TabControl>
   </Grid>
-</Window>   
+</Window>

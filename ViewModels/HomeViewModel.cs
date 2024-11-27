@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using IkemenToolbox.Helpers;
 using IkemenToolbox.Services;
 using System;
+using System.ComponentModel;
 using System.Threading.Tasks;
 
 namespace IkemenToolbox.ViewModels
@@ -13,10 +14,16 @@ namespace IkemenToolbox.ViewModels
         private bool _isEditingDefinitionPath = true;
 
         [ObservableProperty]
-        private string _definitionPath = "C:\\Entertainment\\Ikemen_GO-v0.99.0\\chars\\kfm720\\kfm720.def";
+        private string _definitionPath;
 
         [ObservableProperty]
         private FighterManager _fighterManager = new();
+
+        public void Initialize()
+        {
+            Cache.Initialize();
+            DefinitionPath = Cache.Settings.LastDefinitionPath;
+        }
 
         [RelayCommand]
         private async Task SetDefinitionPathAsync()
@@ -32,6 +39,8 @@ namespace IkemenToolbox.ViewModels
             {
                 await FighterManager.InitializeAsync(DefinitionPath);
                 IsEditingDefinitionPath = false;
+
+                Cache.Settings.LastDefinitionPath = DefinitionPath;
             }
             catch (Exception ex)
             {

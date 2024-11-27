@@ -5,9 +5,7 @@ using IkemenToolbox.Helpers;
 using IkemenToolbox.Models;
 using System;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
-
 
 namespace IkemenToolbox.Services
 {
@@ -39,17 +37,20 @@ namespace IkemenToolbox.Services
         //Definition
         [RelayCommand]
         private void AddStateFile() => Fighter.StFiles.Add(string.Empty);
+
         [RelayCommand]
         private void RemoveStateFile(string stFile) => Fighter.StFiles.Remove(stFile);
 
         //Command
         [RelayCommand]
         private void AddEntryState() => Fighter.EntryStates.AddToStart(new() { IsEntryState = true });
+
         [RelayCommand]
         private void RemoveEntryState(State entryState) => Fighter.EntryStates.Remove(entryState);
 
         [RelayCommand]
         private void AddCommandDefinition() => Fighter.CommandDefinitions.AddToStart(new());
+
         [RelayCommand]
         private void RemoveCommandDefinition(CommandDefinition commandDefinition) => Fighter.CommandDefinitions.Remove(commandDefinition);
 
@@ -64,8 +65,10 @@ namespace IkemenToolbox.Services
         //Quotes
         [RelayCommand]
         private void AddQuote() => Fighter.Quotes.Add(string.Empty);
+
         [RelayCommand]
         private void AddJapaneseQuote() => Fighter.Ja_Quotes.Add(string.Empty);
+
         [RelayCommand]
         private void RemoveJapaneseQuote() => Fighter.Ja_Quotes.Add(string.Empty);
 
@@ -80,9 +83,11 @@ namespace IkemenToolbox.Services
                     case CommonFile.def:
                         await writer.WriteDefAsync();
                         break;
+
                     case CommonFile.cns:
                         await writer.WriteCnsAsync();
                         break;
+
                     default:
                         throw new InvalidOperationException("File Type not supported");
                 }

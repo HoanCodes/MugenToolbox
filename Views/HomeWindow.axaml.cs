@@ -14,8 +14,9 @@ namespace IkemenToolbox.Views
 
 #if DEBUG
             Title += " - DEBUGGING";
-            StatesTab.IsVisible = true;
+            //StatesTab.IsVisible = true;
 #endif
+            _vm.Initialize();
         }
     }
 }

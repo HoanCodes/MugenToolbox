@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
+using IkemenToolbox.Helpers;
 using IkemenToolbox.Views;
 
 namespace IkemenToolbox
@@ -17,6 +18,9 @@ namespace IkemenToolbox
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
+                desktop.Exit += Desktop_Exit;
+                Cache.Initialize();
+
                 // Line below is needed to remove Avalonia data validation.
                 // Without this line you will get duplicate validations from both Avalonia and CT
                 BindingPlugins.DataValidators.RemoveAt(0);
@@ -24,6 +28,11 @@ namespace IkemenToolbox
             }
 
             base.OnFrameworkInitializationCompleted();
+        }
+
+        private void Desktop_Exit(object sender, ControlledApplicationLifetimeExitEventArgs e)
+        {
+            Cache.Save();
         }
     }
 }
